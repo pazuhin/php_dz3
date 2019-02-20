@@ -86,3 +86,12 @@ function getSum()
     }
     echo 'Сумма четных чисел в файле = ' . $sum;
 }
+
+function task4()
+{
+    $result = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&r
+vprop=content&format=json');
+    $json = json_decode($result, true);
+    echo 'Title is : ' . $json['query']['pages']['15580374']['title'] . '<br>';
+    echo 'Page_id is : ' . $json['query']['pages']['15580374']['pageid'] . '<br>';
+}

@@ -4,3 +4,5 @@ task1();
 task2();
 task3();
 getSum();
+echo '<pre>';
+task4();
